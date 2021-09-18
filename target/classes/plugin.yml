@@ -1,0 +1,8 @@
+name: CustomItems
+version: "1.0.0"
+main: ru.osk.customitems.CustomItems
+api-version: 1.16
+authors: [ osk ]
+commands:
+  customitems:
+    aliases: [ ci ]

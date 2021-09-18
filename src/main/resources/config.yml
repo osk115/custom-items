@@ -1,0 +1,110 @@
+# CustomItems v1.0.0 (spigot-1.16.5)
+# vk.com/osk115
+
+items:
+
+  testBow:
+
+    material: BOW
+    unbreakable: true
+
+    displayName: '&aНеразрушаемый лук'
+
+    flags:
+      hideUnbreakable: true
+
+    attributes:
+
+      damageAttribute:
+
+        # Доступные аттрибуты: GENERIC_ATTACK_DAMAGE, GENERIC_MAX_HEALTH, GENERIC_MOVEMENT_SPEED,
+        # GENERIC_ARMOR, GENERIC_LUCK, GENERIC_ATTACK_KNOCKBACK, GENERIC_ATTACK_SPEED
+        attribute: 'GENERIC_MAX_HEALTH'
+
+        # Отображаемое название
+        # (Если использовать название аттрибута, будет выдано имя по-умолчанию)
+        name: 'к максимальному здоровью' # отображается как "+10 к максимальному здоровью"
+
+        # Слот в котором действует аттрибут
+        # (HAND, OFF_HAND, HEAD, CHEST, FEET, LEGS)
+        equipmentSlot: HAND
+
+        # Операция
+        # (ADD_NUMBER, ADD_SCALAR, MULTIPLY_SCALAR_1)
+        operation: ADD_NUMBER
+
+        # Значение
+        amount: 10 # может быть отрицательным
+
+  testSword:
+
+    material: WOODEN_SWORD
+    unbreakable: false
+
+    displayName: '&6Тестовый меч'
+    lore:
+      - '&7Простое описание'
+      - '&7на несколько строк.'
+
+    # Список зачарований:
+    # https://hub.spigotmc.org/javadocs/spigot/org/bukkit/enchantments/Enchantment.html
+    enchantments:
+      - DURABILITY;1
+
+    flags:
+      hideAttributes: false
+      hideDestroys: false
+      hideEnchants: false
+      hidePlacedOn: false
+      hidePotionEffects: false
+      hideUnbreakable: false
+
+    attributes:
+
+      damageAttribute:
+
+        # Доступные аттрибуты: GENERIC_ATTACK_DAMAGE, GENERIC_MAX_HEALTH, GENERIC_MOVEMENT_SPEED,
+        # GENERIC_ARMOR, GENERIC_LUCK, GENERIC_ATTACK_KNOCKBACK, GENERIC_ATTACK_SPEED
+        attribute: 'GENERIC_ATTACK_DAMAGE'
+
+        # Отображаемое название
+        # (Если использовать название аттрибута, будет выдано имя по-умолчанию)
+        name: 'generic.attackDamage'
+
+        # Слот в котором действует аттрибут
+        # (HAND, OFF_HAND, HEAD, CHEST, FEET, LEGS)
+        equipmentSlot: HAND
+
+        # Операция
+        # (ADD_NUMBER, ADD_SCALAR, MULTIPLY_SCALAR_1)
+        operation: ADD_NUMBER
+
+        # Значение
+        amount: 40 # может быть отрицательным
+
+potions:
+
+  testPotion:
+
+    # POTION, SPLASH_POTION, LINGERING_POTION
+    material: POTION
+
+    displayName: '&8Зелье ослепления &7[👁]'
+    lore:
+      - '&7'
+      - '&7 Ослепляет вас '
+      - '&7 на &f&l10 секунд'
+      - '&7'
+
+    # RGB цвет
+    color:
+      r: 0
+      g: 0
+      b: 0
+
+    effects:
+
+      testEffect:
+        effect: BLINDNESS # Список эфектов https://hub.spigotmc.org/javadocs/spigot/org/bukkit/potion/PotionEffectType.html
+        duration: 200 # в тиках (20 тиков = 1 секунда)
+        amplifier: 3
