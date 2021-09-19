@@ -1,14 +1,11 @@
 package ru.osk.customitems;
 
-import org.bukkit.Bukkit;
-import org.bukkit.attribute.AttributeModifier;
-import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.plugin.java.JavaPlugin;
-import ru.osk.customitems.commands.MainCommand;
+import ru.osk.customitems.commands.main.MainCommand;
+import ru.osk.customitems.commands.main.MainCommandTabCompleter;
 import ru.osk.customitems.config.ConfigManager;
 
 import java.io.File;
-import java.util.UUID;
 
 public final class CustomItems extends JavaPlugin {
 
@@ -19,6 +16,7 @@ public final class CustomItems extends JavaPlugin {
         ConfigManager configManager = new ConfigManager(this.getConfig());
 
         this.getCommand("customitems").setExecutor(new MainCommand(configManager.getItemsManager().getItems()));
+        this.getCommand("customitems").setTabCompleter(new MainCommandTabCompleter(configManager.getItemsManager().getItems()));
 
     }
 
