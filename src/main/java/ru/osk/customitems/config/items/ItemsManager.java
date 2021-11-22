@@ -1,11 +1,7 @@
 package ru.osk.customitems.config.items;
 
-import com.sun.istack.internal.NotNull;
-import com.sun.xml.internal.stream.StaxErrorReporter;
-import org.bukkit.Bukkit;
 import org.bukkit.Color;
 import org.bukkit.Material;
-import org.bukkit.NamespacedKey;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.attribute.AttributeModifier;
 import org.bukkit.configuration.Configuration;
@@ -78,7 +74,7 @@ public class ItemsManager {
                 AttributeModifier modifier = new AttributeModifier(
                         UUID.randomUUID(),
                         Objects.requireNonNull(config.getString(path + ".attributes." + attributeId + ".name")),
-                        config.getInt(path + ".attributes." + attributeId + ".amount"),
+                        config.getDouble(path + ".attributes." + attributeId + ".amount"),
                         AttributeModifier.Operation.valueOf(config.getString(path + ".attributes." + attributeId + ".operation")),
                         EquipmentSlot.valueOf(config.getString(path + ".attributes." + attributeId + ".equipmentSlot")));
 
