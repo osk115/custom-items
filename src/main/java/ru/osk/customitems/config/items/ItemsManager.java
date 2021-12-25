@@ -42,7 +42,8 @@ public class ItemsManager {
         itemMeta.setDisplayName(Colorizer.colorizeString(config.getString(path + ".displayName", "&7")));
         itemMeta.setLore(Colorizer.colorizeList(config.getStringList(path + ".lore")));
 
-        itemMeta.setUnbreakable(config.getBoolean(path + ".unbreakable"));
+        itemMeta.setCustomModelData(config.getInt(path + ".customModelData", 0));
+        itemMeta.setUnbreakable(config.getBoolean(path + ".unbreakable", false));
 
         for (String enchant : config.getStringList(path + ".enchantments")) {
             String[] args = enchant.split(";");

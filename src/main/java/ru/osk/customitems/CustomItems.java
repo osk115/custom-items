@@ -1,6 +1,5 @@
 package ru.osk.customitems;
 
-import org.bukkit.configuration.Configuration;
 import org.bukkit.plugin.java.JavaPlugin;
 import ru.osk.customitems.commands.main.MainCommand;
 import ru.osk.customitems.commands.main.MainCommandTabCompleter;
